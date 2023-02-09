@@ -1,0 +1,57 @@
+﻿body {
+    background: rgb(122, 139, 227);
+}
+
+.title {
+    text-align:center;
+    color:darkblue;
+    text-decoration-line:underline;
+    margin-bottom: 2em;   
+}
+
+#calculator-form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2em;
+}
+
+p {
+    font-size: 30px;
+    text-align: center;
+    font-style: oblique;
+}
+
+input {
+   
+    height: 30px;
+    width: 15em;
+    padding: 5px;
+    
+}
+button {
+
+    color: darkblue;
+    border-radius: 12px;
+    margin-left: 2em;
+    height: 43px;
+    width: 5em;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+#result {
+    text-align:center;
+    font-size:30px;
+}
+.description {
+
+    position: absolute;
+    text-align: left;
+    font-size: 1.5em;
+    color: darkblue;
+    border: double;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    font-style:normal;
+  
+}
