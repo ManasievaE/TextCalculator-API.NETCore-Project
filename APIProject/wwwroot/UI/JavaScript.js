@@ -4,7 +4,13 @@ document.getElementById("calculator-form").addEventListener("submit", async func
     const numbers = event.target.elements.numbers.value;
 
     try {
-        const response = await fetch(`http://localhost:44313/api/TextCalculator?input=${numbers}`);
+        const response = await fetch(`http://localhost:44313/api/TextCalculator`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ input: numbers })
+        });
 
         if (!response.ok) {
             throw new Error(response.statusText);
@@ -16,4 +22,3 @@ document.getElementById("calculator-form").addEventListener("submit", async func
         document.getElementById("result").innerHTML = error.message;
     }
 });
-
