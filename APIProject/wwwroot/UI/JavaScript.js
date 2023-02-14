@@ -7,18 +7,18 @@ document.getElementById("calculator-form").addEventListener("submit", async func
         const response = await fetch(`http://localhost:44313/api/TextCalculator`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "content-type": "application/json"
             },
             body: JSON.stringify({ input: numbers })
         });
 
         if (!response.ok) {
-            throw new Error(response.statusText);
-        }
+            throw new error(response.statustext);
+       }
 
         const result = await response.text();
         document.getElementById("result").innerHTML = result;
-    } catch (error) {
+    }  catch (error) {
         document.getElementById("result").innerHTML = error.message;
     }
 });

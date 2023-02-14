@@ -10,14 +10,15 @@ namespace TaskOne
             {
                 TextCalculator calculator = new TextCalculator();
                 Console.WriteLine(calculator.Add(args[0]));
+               
             }
             else
             {
                 Console.WriteLine("No numbers");
-                Console.ReadLine();
+                
             }
 
-
+            Console.ReadLine();
         }
     }
 }

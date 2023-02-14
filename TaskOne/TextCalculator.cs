@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace TaskOne
 {
@@ -16,13 +13,13 @@ namespace TaskOne
             }
 
             string[] numberStrings = numbers.Split(',');
-            int[] numbersArray = new int[numberStrings.Length];
-            List<int> negativeNumbers = new List<int>();
+            double[] numbersArray = new double[numberStrings.Length];
+            List<double> negativeNumbers = new List<double>();
 
             for (int i = 0; i < numberStrings.Length; i++)
             {
 
-                if (!int.TryParse(numberStrings[i], out numbersArray[i]))
+                if (!double.TryParse(numberStrings[i], out numbersArray[i]))
                 {
                     throw new InvalidOperationException("Input must contain only digits.");
                 }
@@ -44,8 +41,8 @@ namespace TaskOne
                 throw new InvalidOperationException("Negative numbers not allowed: " + negativeNumbersList);
             }
 
-            int result = 0;
-            foreach (int number in numbersArray)
+            double result = 0;
+            foreach (double number in numbersArray)
             {
                 result += number;
             }
