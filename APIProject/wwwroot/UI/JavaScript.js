@@ -4,13 +4,14 @@ document.getElementById("calculator-form").addEventListener("submit", async func
     const numbers = event.target.elements.numbers.value;
 
     try {
-        const response = await fetch(`http://localhost:44313/api/TextCalculator`, {
+        const response = await fetch(`https://localhost:44313/api/TextCalculator?input=` + numbers, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify({ input: numbers })
+            //body: JSON.stringify({ input: numbers })
         });
+
 
         if (!response.ok) {
             throw new error(response.statustext);
